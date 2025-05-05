@@ -12,3 +12,33 @@ body {
     font-size: 1.2em;
     line-height: 1.5em;
 }
+
+/* Konvertera-sidans val av konverterare. */
+.convert-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.convert-choice {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.convert-choice li {
+    margin: 40px 50px;
+    background-color: rgb(60, 60, 142);
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.convert-choice a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.convert-choice li:hover {
+    background-color: rgb(60, 60, 42);
+}
