@@ -12,6 +12,9 @@ body {
     font-size: 1.2em;
     line-height: 1.5em;
 }
+main {
+    min-height: 100vh;
+}
 
 /* Konvertera-sidans val av konverterare. */
 .convert-section {

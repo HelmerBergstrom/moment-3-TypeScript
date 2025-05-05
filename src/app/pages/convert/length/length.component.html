@@ -1,1 +1,26 @@
 <app-convert-menu></app-convert-menu>
+
+<section>
+    <h2> Längd-konverterare </h2>
+    
+        <p>
+            Nedan kan du konvertera från meter till fot(feet) och vice versa!
+        </p>
+    
+</section>
+
+<div>
+    <label for="num1"> Ange längd i meter: </label>
+    <input type="number" id="num1" [(ngModel)]="meter">
+    <button (click)="convertToFeet()"> Konvertera till feet </button>
+    <p class="convertSum"> {{ resultMtoF }} </p>
+<br>
+<br>
+    <label for="num2"> Ange grader i feet: </label>
+    <input type="number" id="num2" [(ngModel)]="feet">
+    <button (click)="convertToMeter()"> Konvertera till meter </button>
+    <p class="convertSum"> {{ resultFtoM }} </p>
+</div>
+
+<div>
+</div>
