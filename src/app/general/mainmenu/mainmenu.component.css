@@ -1,0 +1,29 @@
+nav {
+    background-color: rgb(75, 163, 192);
+    height: 75px;
+}
+ul {
+    display: flex;
+    justify-content: center;
+}
+li {
+    margin-top: 15px;
+    padding: 10px;
+    list-style: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a {
+    padding: 10px;
+    font-size: 26px;
+    margin: 20px;
+    text-decoration: none;
+    color: wheat;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.active-menu {
+    text-decoration: underline;
+}
