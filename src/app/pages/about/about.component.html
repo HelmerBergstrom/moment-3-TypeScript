@@ -1,1 +1,109 @@
-<p>about works!</p>
+<section>
+    <h1> Slutsatser & förklaring </h1>
+
+<div>
+    <h2> Starten </h2>
+        <p>
+            Jag påbörjade arbetet med att skapa de komponenter som jag skulle behöva. Jag skapade tre separata komponenter: 
+            About, Home och Convert. I Convert-komponenten skapade jag två ytterligare komponenter som fick heta Length och Temp.
+            Dessa två komponenter skulle alltså finnas inuti Convert-komponenten, för att skapa en liten app-liknande känsla där.
+            Med alla komponenter skapade, använde jag filen "app.routes.ts" för att skapa routes till alla komponenter.
+        </p>
+
+    <h2> Convert </h2>
+        <p>
+            För att koppla komponenterna i Convert-konstellationen, skapade jag två länkar i den generella Convert-komponenten till de
+            andra två komponenterna. Dessa länkar skulle se ut likadant på Convert-sidan som på length- och temp-sidorna, vilket gav
+            mig idén om att skapa en egen komponent för denna "undermeny". Denna meny lade jag i en mapp som heter General, för att 
+            undvika redundans. Efter det infogade jag länken från undermenyn till sidorna, stilat och klart. Detta såklart efter att ha
+            lagt till komponenten i TS-filens imports-array.
+        </p>
+
+    <h2> Navigationsmenyn </h2>
+        <p>
+            Huvudmenyn skapades likt föregående meny, med en egen komponent i General-mappen. Det som skiljer sig från Convert-menyn, är att 
+            denna meny ska finnas på varje sida. För att infoga menyn, efter den skapats i sin egen komponent, använde jag den app.component.html-filen 
+            och infogade länken till huvudmenyn i header-sektionen som jag skapat där. Detta givetvis efter jag lagt till komponenten i den generella
+            imports-arrayen i filen "app.component.ts".            
+<br>
+            För att länkarna ska fungera som en riktig webbtjänst utan sidomladdning, använde jag "RouterLink" som komponent i imports-arrayerna där 
+            länkar ska finnas. Detta för att kunna använda "RouterLink" i själva länkarna i HTML-koden. Även "RouterLinkActive" lades till i 
+            huvudmenyns TypeScript-fil för att kunna sätta klass på aktiva länken.
+        </p>
+
+    <h2> Konverteringsfunktioner </h2>
+        <p>
+            Jag skapade först två rutor på sidan där användaren kan mata in värden som de vill konvertera. Detta gjorde jag 
+            genom formulär-elementen "input" och "label". Även en knapp skapades som skulle konvertera och ett tomt p-element
+            där resultat ska skrivas ut. För att kunna använda formuläret med Angular-funktioner infogade jag FormsModule till
+            respektive TypeScript-fil.
+        </p>
+        <p>
+            För att skapa funktioner för att konvertera värden, använde jag den redan skapade klassen
+            för komponenten. Om vi börjar med längd-konverteraren, så skapade jag först fyra nya variabler i klassen.
+            Dessa variabler blev: 
+        </p>
+            <ul>
+                <li> meter - nummer </li>
+                <li> feet - nummer </li>
+                <li> resultMtoF - sträng </li>
+                <li> resultFtoM - sträng </li>
+            </ul>
+        <p>
+            Jag lagrade numren som en 0:a och strängarna som tomma strängar.
+            <br>
+            Efter detta skapade jag funktioner för att konvertera värden. I funktionerna skapade jag 
+            en ny variabel för själva uträkningen. I konverteringsfunktionen från meter till feet, såg det ut såhär: 
+            <br>
+            <strong> let feetResult = this.meter * 3.28084; </strong>
+            <br>
+            "this.meter" blir alltså det som användaren matat in i rutan. Efter detta matade jag in resultatet i 
+            resultMtoF. Avrundade resultatet till 2 decimaler som mest genom "toFixed(2)".
+        </p>
+        <p>
+            När uträkningen och allt i TypeScript var klart, infogade jag till HTML-sidan. Detta via en rad olika nya 
+            funktioner. [(ngModel)] användes i input-elementet för att skicka informationen till TypeScript. Skriver en
+            användare siffran 10 i input-fältet ska det skickas till TypeScript och köras där.
+            [(ngModel)]="meter" implementerades där användaren ska mata in värdet i meter. "meter" för att variabeln som 
+            jag skapade i TypeScript heter detsamma.
+        <br>
+            Knappen för att konvertera värdet som användaren matat in, kallade på sin respektive funktion. Knappen för att 
+            konvertera meter till feet kallade t.ex. på funktionen "convertToFeet()".
+        <br>
+            Efter knappen klickats på, skrivs resultatet ut. Detta skrivs ut med variabeln resultMtoF eller motsatsen resultFtoM.
+            För att skriva ut resultatet användes måsvingar med själva variabeln inuti.        
+            Två måsvingar används för "interpolation", alltså för att visa ett värde från TypeScript till HTML.
+        </p>
+        <br>
+        <p>
+            Temperatur-konverteringen skapades på samma vis, med undantag för själva uträkningen.
+        </p>
+
+    <h2> Bild </h2>
+        <p>
+            För att infoga en bild till startsidan la jag bilden i "public"-mappen. Därefter skapade jag en 
+            variabel i TypeScript-filen som ser ut såhär:
+            <strong>convertImage: string = "/convert.jpg";</strong>
+            <br>
+            För att sedan implementera bilden till HTML, användes img-elementet med src inuti array-parantes 
+            och sedan namnet på variabeln som ovan, alltså "convertImage". 
+        </p>
+</div>
+
+    <h2> Slutsats </h2>
+    <p>
+        De slutsatser jag dragit efter att ha gjort uppgiften är följande:
+    <br>
+        Angular är just nu det verktyg som känns absolut trevligast att använda. Jag älskar strukturen man får med 
+        komponenter och hur enkelt det är att dela upp arbetet. Att man har enskilda HTML, CSS och TypeScript-filer för olika
+        komponenter för livet så mycket enklare.
+<br>
+        Att komma igång var även det väldigt enkelt och själva mallen som man får direkt efter att ha laddat ned paketet är 
+        grymt.
+<br>
+        Det absolut bästa med Angular är enligt mig att man kan skapa komponenter för exempelvis huvudmenyn, som ska finnas på varje
+        sida och att man kan implementera den med minimal kod sedan. Detta i kombination med att det aktiva menyvalet automatiskt känns igen är klockrent!
+    </p>
+    <br>
+    <br>
+</section>
