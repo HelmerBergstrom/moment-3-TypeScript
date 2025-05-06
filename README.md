@@ -16,7 +16,7 @@ Komponenter har använts för de olika sidorna och för att separera koden för 
 
 Med routes laddas inte sidan om när man klickar på en länk, sidan byts bara ut. All data hämtas allstå vid första besöket till webbplatsen istället för att laddas när användaren navigerar. Detta görs med hjälp av den generella app.component.html-filen och elementet 
 ```bash
-"<router-outlet />"
+<router-outlet />
 ```
 
 I detta element lagras de som visas för användaren. Klickar en användare på Startsidan, läggs komponenten för startsidan in i detta element och visas på skärmen, istället för att ladda ned en helt ny sida för användaren. 
