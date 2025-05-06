@@ -1,6 +1,26 @@
-# Moment3Ts
+# Moment 3 TypeScript
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+Detta projekt skapades med [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10. Mer information om hur man arbetar med Angular finns längre ned på sidan!
+
+## Uppgiften
+
+Denna uppgift handlade om att lära känna Angular och de funktioner som kommer med det. I uppgiften skapades en hemsida med en huvudmeny och tre undersidor. En startsida, en sida för konvertering av värden och en sida som beskriver uppgiften och de slutsatser
+jag har efter att ha löst uppgiften
+
+Konverteringen sker av längd(meter och feet) och temperatur(celsius och fahrenheit). Dessa konverteringar skapades med TypeScript och
+HTML, med Angulars inbyggda verktyg. 
+
+Startsidan består av information i ren text om vad hemsidan har för syfte och även en bild som även den har lagts till med både TypeScript och HTML.
+
+Komponenter har använts för de olika sidorna och för att separera koden för lättare hantering. Komponenter har skapats för alla sidor/undersidor, men även för huvudmenyn, footern och undermenyn på konverteringssidan. Länkarna mellan alla sidor har skapats med routes istället för vanliga länkar, för att ge en app-liknande känsla till webbplatsen. 
+
+Med routes laddas inte sidan om när man klickar på en länk, sidan byts bara ut. All data hämtas allstå vid första besöket till webbplatsen istället för att laddas när användaren navigerar. Detta görs med hjälp av den generella app.component.html-filen och elementet 
+```bash
+"<router-outlet />"
+```
+
+I detta element lagras de som visas för användaren. Klickar en användare på Startsidan, läggs komponenten för startsidan in i detta element och visas på skärmen, istället för att ladda ned en helt ny sida för användaren. 
+
 
 ## Development server
 
