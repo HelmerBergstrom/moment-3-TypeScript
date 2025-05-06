@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { ConvertMenuComponent } from '../../../general/convert-menu/convert-menu.component';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-length',
-  imports: [RouterLink, ConvertMenuComponent, FormsModule],
+  imports: [ConvertMenuComponent, FormsModule],
   templateUrl: './length.component.html',
   styleUrl: './length.component.css'
 })
