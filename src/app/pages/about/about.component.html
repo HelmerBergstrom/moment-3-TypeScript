@@ -26,6 +26,7 @@
             och infogade länken till huvudmenyn i header-sektionen som jag skapat där. Detta givetvis efter jag lagt till komponenten i den generella
             imports-arrayen i filen "app.component.ts".            
 <br>
+<br>
             För att länkarna ska fungera som en riktig webbtjänst utan sidomladdning, använde jag "RouterLink" som komponent i imports-arrayerna där 
             länkar ska finnas. Detta för att kunna använda "RouterLink" i själva länkarna i HTML-koden. Även "RouterLinkActive" lades till i 
             huvudmenyns TypeScript-fil för att kunna sätta klass på aktiva länken.
@@ -38,6 +39,7 @@
             där resultat ska skrivas ut. För att kunna använda formuläret med Angular-funktioner infogade jag FormsModule till
             respektive TypeScript-fil.
         </p>
+<br>
         <p>
             För att skapa funktioner för att konvertera värden, använde jag den redan skapade klassen
             för komponenten. Om vi börjar med längd-konverteraren, så skapade jag först fyra nya variabler i klassen.
@@ -49,32 +51,36 @@
                 <li> resultMtoF - sträng </li>
                 <li> resultFtoM - sträng </li>
             </ul>
-        <p>
+            <p>
             Jag lagrade numren som en 0:a och strängarna som tomma strängar.
-            <br>
+<br>
+<br>
             Efter detta skapade jag funktioner för att konvertera värden. I funktionerna skapade jag 
             en ny variabel för själva uträkningen. I konverteringsfunktionen från meter till feet, såg det ut såhär: 
-            <br>
+<br>
             <strong> let feetResult = this.meter * 3.28084; </strong>
             <br>
             "this.meter" blir alltså det som användaren matat in i rutan. Efter detta matade jag in resultatet i 
             resultMtoF. Avrundade resultatet till 2 decimaler som mest genom "toFixed(2)".
         </p>
+<br>
         <p>
             När uträkningen och allt i TypeScript var klart, infogade jag till HTML-sidan. Detta via en rad olika nya 
             funktioner. [(ngModel)] användes i input-elementet för att skicka informationen till TypeScript. Skriver en
             användare siffran 10 i input-fältet ska det skickas till TypeScript och köras där.
             [(ngModel)]="meter" implementerades där användaren ska mata in värdet i meter. "meter" för att variabeln som 
             jag skapade i TypeScript heter detsamma.
-        <br>
+<br>
+<br>
             Knappen för att konvertera värdet som användaren matat in, kallade på sin respektive funktion. Knappen för att 
             konvertera meter till feet kallade t.ex. på funktionen "convertToFeet()".
-        <br>
+<br>
+<br>
             Efter knappen klickats på, skrivs resultatet ut. Detta skrivs ut med variabeln resultMtoF eller motsatsen resultFtoM.
             För att skriva ut resultatet användes måsvingar med själva variabeln inuti.        
             Två måsvingar används för "interpolation", alltså för att visa ett värde från TypeScript till HTML.
         </p>
-        <br>
+<br>
         <p>
             Temperatur-konverteringen skapades på samma vis, med undantag för själva uträkningen.
         </p>
@@ -98,8 +104,10 @@
         komponenter och hur enkelt det är att dela upp arbetet. Att man har enskilda HTML, CSS och TypeScript-filer för olika
         komponenter för livet så mycket enklare.
 <br>
+<br>
         Att komma igång var även det väldigt enkelt och själva mallen som man får direkt efter att ha laddat ned paketet är 
         grymt.
+<br>
 <br>
         Det absolut bästa med Angular är enligt mig att man kan skapa komponenter för exempelvis huvudmenyn, som ska finnas på varje
         sida och att man kan implementera den med minimal kod sedan. Detta i kombination med att det aktiva menyvalet automatiskt känns igen är klockrent!

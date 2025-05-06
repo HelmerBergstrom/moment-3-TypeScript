@@ -10,7 +10,7 @@ h1 {
 }
 
 ul {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 h2 {
@@ -37,4 +37,16 @@ img {
     width: 100%;
     max-width: 400px;
     margin: 20px;
+}
+
+@media (max-width: 800px) {
+    #last, h1, p {
+        max-width: 400px;
+    }
+    p {
+        font-size: 18px
+    }
+    img {
+        max-width: 300px;
+    }
 }
